@@ -20,7 +20,7 @@ fridgeradar/
 ├── backend/
 │   ├── app/
 │   │   ├── api/v1/
-│   │   │   ├── endpoints/       # 12 endpoints, uno por recurso
+│   │   │   ├── endpoints/       # 13 endpoints, uno por recurso
 │   │   │   └── router.py        # Registro de rutas
 │   │   ├── core/                # config, database, security, logging, exceptions
 │   │   ├── middlewares/         # LoggingMiddleware
@@ -186,6 +186,7 @@ mypy app/
 | GET | `/api/v1/recetas` | Recetas disponibles |
 | GET | `/api/v1/alertas` | Alertas no leídas del usuario |
 | GET/POST | `/api/v1/listas-compra` | Listas de compra |
+| GET/POST/PATCH/DELETE | `/api/v1/estantes` | CRUD de estantes con filtro `?id_zona=` |
 | GET | `/api/v1/desperdicio` | Reporte de desperdicio |
 | GET | `/api/v1/semaforo` | Estado del semáforo de alimentos |
 | GET | `/api/v1/tengo-hambre` | Recetas con ingredientes próximos a vencer |

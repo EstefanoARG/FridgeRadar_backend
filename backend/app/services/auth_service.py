@@ -32,5 +32,5 @@ class AuthService:
             raise NotFoundError("Credenciales inválidas")
         usuario.ultimo_acceso = datetime.utcnow()
         await self.db.flush()
-        token = create_access_token({"sub": usuario.id_usuario})
+        token = create_access_token({"sub": str(usuario.id_usuario)})
         return TokenResponse(access_token=token)

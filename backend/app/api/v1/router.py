@@ -4,6 +4,7 @@ from app.api.v1.endpoints import (
     alertas,
     auth,
     desperdicio,
+    estantes,
     hogares,
     inventario,
     listas_compra,
@@ -21,6 +22,7 @@ api_router.include_router(auth.router,          prefix="/auth",          tags=["
 api_router.include_router(usuarios.router,      prefix="/usuarios",      tags=["Usuarios"])
 api_router.include_router(hogares.router,       prefix="/hogares",       tags=["Hogares"])
 api_router.include_router(zonas.router,         prefix="/zonas",         tags=["Zonas"])
+api_router.include_router(estantes.router,      prefix="/estantes",      tags=["Estantes"])
 api_router.include_router(inventario.router,    prefix="/inventario",    tags=["Inventario"])
 api_router.include_router(productos.router,     prefix="/productos",     tags=["Productos"])
 api_router.include_router(recetas.router,       prefix="/recetas",       tags=["Recetas"])
